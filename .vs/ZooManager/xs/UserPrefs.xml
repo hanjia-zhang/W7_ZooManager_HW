@@ -3,26 +3,29 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="ZooManager/Animal.cs">
     <Files>
       <File FileName="ZooManager/Pages/Index.razor" Line="126" Column="7" />
-      <File FileName="ZooManager/Zone.cs" Line="22" Column="16" />
-      <File FileName="ZooManager/Cat.cs" Line="55" Column="2" />
-      <File FileName="ZooManager/Mouse.cs" Line="92" Column="1" />
-      <File FileName="ZooManager/Animal.cs" Line="80" Column="52" />
-      <File FileName="ZooManager/Game.cs" />
-      <File FileName="ZooManager/Point.cs" Line="11" Column="1" />
-      <File FileName="ZooManager/Program.cs" Line="1" Column="1" />
-      <File FileName="ZooManager/Raptor.cs" Line="1" Column="1" />
+      <File FileName="ZooManager/Zone.cs" />
+      <File FileName="ZooManager/Cat.cs" Line="1" Column="1" />
+      <File FileName="ZooManager/Mouse.cs" />
+      <File FileName="ZooManager/Animal.cs" Line="14" Column="1" />
+      <File FileName="ZooManager/Game.cs" Line="110" Column="51" />
+      <File FileName="ZooManager/Point.cs" />
+      <File FileName="ZooManager/Program.cs" />
+      <File FileName="ZooManager/Raptor.cs" />
       <File FileName="ZooManager/_Imports.razor" />
-      <File FileName="ZooManager/App.razor" Line="11" Column="1" />
+      <File FileName="ZooManager/App.razor" />
       <File FileName="ZooManager/Bird.cs" Line="1" Column="1" />
       <File FileName="ZooManager/Chick.cs" />
-      <File FileName="ZooManager/Direction.cs" Line="8" Column="6" />
+      <File FileName="ZooManager/Direction.cs" />
+      <File FileName="ZooManager/Iprey.cs" Line="9" Column="1" />
+      <File FileName="ZooManager/IPredator.cs" Line="4" Column="31" />
+      <File FileName="ZooManager/Alien.cs" Line="11" Column="1" />
+      <File FileName="ZooManager/Creatures.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ZooManager" expanded="True">
             <Node name="ZooManager" expanded="True">
-              <Node name="Pages" expanded="True" />
               <Node name="Animal.cs" selected="True" />
             </Node>
           </Node>

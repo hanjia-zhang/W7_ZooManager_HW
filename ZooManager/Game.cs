@@ -94,8 +94,9 @@ namespace ZooManager
             if (animalType == "mouse") holdingPen.occupant = new Mouse("Squeaky");
             if (animalType == "raptor") holdingPen.occupant = new Raptor("Condor");
             if (animalType == "chick") holdingPen.occupant = new Chick("Rocky");
+            if (animalType == "alien") holdingPen.occupant = new Alien("Bibi");
             Console.WriteLine($"Holding pen occupant at {holdingPen.occupant.location.x},{holdingPen.occupant.location.y}");
-            ActivateAnimals();
+            //ActivateAnimals();
         }
 
         static public void ActivateAnimals()
@@ -107,16 +108,27 @@ namespace ZooManager
                     for (var x = 0; x < numCellsX; x++)
                     {
                         var zone = animalZones[y][x];
-                        if (zone.occupant != null && zone.occupant.reactionTime == r)
+                        if (zone.occupant != null && zone.occupant.reactionTime == r && !zone.occupant.isMove)
                         {
+                            zone.occupant.isMove = true;
                             zone.occupant.Activate();
                         }
                     }
                 }
             }
+            /*checks if the occupant property of the zone is not null. 
+             * If it is not null, then it sets the isMove property of the occupant to false.*/
+            for (var y = 0; y < numCellsY; y++)
+            {
+                for (var x = 0; x < numCellsX; x++)
+                {
+                    var zone = animalZones[y][x];
+                    if (zone.occupant != null) zone.occupant.isMove = false;
+                }
+            }
         }
 
-        
+
 
         /* This method currently assumes that the attacker has determined there is prey
          * in the target direction. In addition to bug-proofing our program, can you think
@@ -124,7 +136,7 @@ namespace ZooManager
          * successful for that matter) could be used?
          */
 
-        static public void Attack(Animal attacker, Direction d)
+        static public void Attack(Creatures attacker, Direction d)
         {
             Console.WriteLine($"{attacker.name} is attacking {d.ToString()}");
             int x = attacker.location.x;
@@ -158,7 +170,7 @@ namespace ZooManager
          * this code (and the Attack and Seek code) to help our animals strategize more...
          */
 
-        static public bool Retreat(Animal runner, Direction d)
+        static public bool Retreat(Creatures runner, Direction d)
         {
             Console.WriteLine($"{runner.name} is retreating {d.ToString()}");
             int x = runner.location.x;

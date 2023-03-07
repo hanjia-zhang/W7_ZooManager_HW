@@ -29,7 +29,6 @@ namespace ZooManager
          * cat also has a predator to avoid, since the cat may not want to run in
          * to a square that sets it up to be attacked!
          */
-
         public void Hunt(string prey, string prey2) //hz 
         {
 

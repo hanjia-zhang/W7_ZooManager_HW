@@ -3,8 +3,9 @@ namespace ZooManager
 {
     public class Zone
     {
-        private Animal _occupant = null;
-        public Animal occupant
+        private Creatures _occupant = null;
+        public Creatures occupant
+        
         {
             get { return _occupant; }
             set {
