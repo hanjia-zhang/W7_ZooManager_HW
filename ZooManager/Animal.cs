@@ -4,29 +4,29 @@ namespace ZooManager
 {
     public class Animal:Creatures, IPredator, Iprey
     {
-       
+
         //public int movedistance = 1;//hz
 
 
         /*Change the Hunt class to the Animal which only needs to be called from this class if want to add new animals, 
          * instead to writhe a new once. Also pass a string parameter "prey" which identifies the specific animal
          */
-        public void Hunt(string prey) //hz 
+        public void Hunt(string prey, string prey2) //hz 
         {
 
-            if (Seek(location.x, location.y, Direction.up, prey, setdistance) == 1)//f.
+            if (Seek(location.x, location.y, Direction.up, prey, setdistance) == 1 || Seek(location.x, location.y, Direction.up, prey2, setdistance) == 1)//f.
             {
                 Game.Attack(this, Direction.up);
             }
-            else if (Seek(location.x, location.y, Direction.down, prey, setdistance) == 1)//f.
+            else if (Seek(location.x, location.y, Direction.down, prey, setdistance) == 1 || Seek(location.x, location.y, Direction.down, prey2, setdistance) == 1)//f.
             {
                 Game.Attack(this, Direction.down);
             }
-            else if (Seek(location.x, location.y, Direction.left, prey, setdistance) == 1)//f.
+            else if (Seek(location.x, location.y, Direction.left, prey, setdistance) == 1 || Seek(location.x, location.y, Direction.left, prey2, setdistance) == 1)//f.
             {
                 Game.Attack(this, Direction.left);
             }
-            else if (Seek(location.x, location.y, Direction.right, prey, setdistance) == 1)//f.
+            else if (Seek(location.x, location.y, Direction.right, prey, setdistance) == 1 || Seek(location.x, location.y, Direction.right, prey2, setdistance) == 1)//f.
             {
                 Game.Attack(this, Direction.right);
             }

@@ -15,27 +15,27 @@ namespace ZooManager
         {
             base.Activate();
             Console.WriteLine("I am a cat. Meow.");
-            Hunt("chick");//hz
-            Hunt("cat");
-            Hunt("mouse");
-            Hunt("raptor");
+            Hunt("chick", "cat");//hz
+            Hunt("mouse", "raptor");
+            
         }
 
-        public void Hunt(string prey)
+        public void Hunt(string prey, string prey2) //hz 
         {
-            if (Seek(location.x, location.y, Direction.up, prey, setdistance) == 1)//f.
+
+            if (Seek(location.x, location.y, Direction.up, prey, setdistance) == 1 || Seek(location.x, location.y, Direction.up, prey2, setdistance) == 1)//f.
             {
                 Game.Attack(this, Direction.up);
             }
-            else if (Seek(location.x, location.y, Direction.down, prey, setdistance) == 1)//f.
+            else if (Seek(location.x, location.y, Direction.down, prey, setdistance) == 1 || Seek(location.x, location.y, Direction.down, prey2, setdistance) == 1)//f.
             {
                 Game.Attack(this, Direction.down);
             }
-            else if (Seek(location.x, location.y, Direction.left, prey, setdistance) == 1)//f.
+            else if (Seek(location.x, location.y, Direction.left, prey, setdistance) == 1 || Seek(location.x, location.y, Direction.left, prey2, setdistance) == 1)//f.
             {
                 Game.Attack(this, Direction.left);
             }
-            else if (Seek(location.x, location.y, Direction.right, prey, setdistance) == 1)//f.
+            else if (Seek(location.x, location.y, Direction.right, prey, setdistance) == 1 || Seek(location.x, location.y, Direction.right, prey2, setdistance) == 1)//f.
             {
                 Game.Attack(this, Direction.right);
             }

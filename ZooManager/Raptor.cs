@@ -15,8 +15,8 @@ namespace ZooManager
         {
             base.Activate();
             Console.WriteLine("I'm a raptor, twitter");
-            Hunt("cat");
-            Hunt("mouse");//d
+            Hunt("cat", "mouse");//d
+
         }
     }
 }
